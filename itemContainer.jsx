@@ -1,6 +1,8 @@
 import React, {PropTypes} from 'react'
 import {connect} from 'react-redux'
 
+import Item from './item.jsx'
+
 class ItemContainer extends React.Component {
 	static propTypes = {
 		item: PropTypes.obj.isRequired
