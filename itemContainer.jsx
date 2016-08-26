@@ -1,7 +1,20 @@
+import React, {PropTypes} from 'react'
 import {connect} from 'react-redux'
 
-const ItemContainer = () => {
-    
+class ItemContainer extends React.Component {
+	static propTypes = {
+		item: PropTypes.obj.isRequired
+	 , active: PropTypes.bool.isRequired
+	}
+	
+	render() {
+		return (
+		    <Item
+		        text={this.props.item.text}
+		        active={this.props.active}
+		    />
+		)
+	}
 }
 
 mapStateToProps = (state) => {
@@ -10,4 +23,4 @@ mapStateToProps = (state) => {
     }
 }
 
-export default class connect()(Item)
+export default connect(mapStateToProps)(ItemContainer)
