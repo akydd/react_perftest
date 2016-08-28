@@ -2,11 +2,9 @@
   "name": "perftest",
   "version": "1.0.0",
   "description": "Small performance test of container components connected to redux",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "NODE_ENV=production webpack --config webpack.config.production.js",
-    "dev": "webpack-dev-server --port 8080"
+    "dev": "$(npm root)/.bin/webpack-dev-server --progress --inline --hot"
   },
   "author": "akydd@ualberta.net",
   "license": "ISC",

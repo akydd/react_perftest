@@ -1,3 +1,4 @@
+import ModeToggleContainer from './modeToggleContainer.jsx'
 import ItemListContainer from './itemListContainer.jsx'
 
 const App = () => (

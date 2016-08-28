@@ -1,5 +1,8 @@
 var webpack = require('webpack');
 
+var port = process.env.PORT || 8080;
+var host = process.env.IP || '127.0.0.1';
+
 var config = {
   entry: './index.jsx',
   output: {
@@ -18,6 +21,10 @@ var config = {
         }
       }
     ]
+  },
+  devServer: {
+    host: host,
+    port: port
   }
 };
 
