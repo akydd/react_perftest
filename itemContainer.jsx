@@ -1,28 +1,22 @@
-import React, {PropTypes} from 'react'
+import {PropTypes} from 'react'
 import {connect} from 'react-redux'
 
 import Item from './item.jsx'
 
-class ItemContainer extends React.Component {
-	static propTypes = {
-		item: PropTypes.obj.isRequired
-	 , active: PropTypes.bool.isRequired
-	}
-	
-	render() {
-		return (
-		    <Item
-		        text={this.props.item.text}
-		        active={this.props.active}
-		    />
-		)
-	}
-}
+const ItemContainer = ({item, active}) => (
+    <Item
+        text={item.text}
+        active={active}
+    />
+)
 
-mapStateToProps = (state) => {
-    return {
-        active: state.get('active')
-    }
+ItemContainer.propTypes = {
+    item: PropTypes.obj.isRequired,
+    active: PropTypes.bool.isRequired
 }
+    
+const mapStateToProps = (state) => ({
+    active: state.get('active')
+})
 
 export default connect(mapStateToProps)(ItemContainer)

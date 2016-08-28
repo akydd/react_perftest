@@ -1,12 +1,10 @@
 import {PropTypes} from 'react'
 
-const Item = ({text, active}) => {
-    return (
-        <div>
-            {text}
-        </div>
-    )
-}
+const Item = ({text, active}) => (
+    <div>
+        {text}
+    </div>
+)
 
 Item.propTypes = {
     text: PropTypes.string.isRequired
