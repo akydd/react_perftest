@@ -1,7 +1,7 @@
-import {Immutable} from 'immutable'
+import Immutable from 'immutable'
 
 let initialState = Immutable.fromJS({
-	items: Immutable.List()
+	items: Immutable.List([{text: 'test'}])
   , active: false
 })
 

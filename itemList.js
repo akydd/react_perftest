@@ -1,4 +1,5 @@
-import {ImmutablePropTypes} from 'immutable'
+import ImmutablePropTypes from 'react-immutable-proptypes'
+import ItemContainer from './itemContainer.js'
 
 const ItemList = ({items}) => (
     <div>

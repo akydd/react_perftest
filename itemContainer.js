@@ -1,7 +1,7 @@
 import {PropTypes} from 'react'
 import {connect} from 'react-redux'
 
-import Item from './item.jsx'
+import Item from './item.js'
 
 const ItemContainer = ({item, active}) => (
     <Item
@@ -11,7 +11,7 @@ const ItemContainer = ({item, active}) => (
 )
 
 ItemContainer.propTypes = {
-    item: PropTypes.obj.isRequired,
+    item: PropTypes.object.isRequired,
     active: PropTypes.bool.isRequired
 }
     

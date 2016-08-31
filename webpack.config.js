@@ -4,7 +4,7 @@ var port = process.env.PORT || 8080;
 var host = process.env.IP || '127.0.0.1';
 
 var config = {
-  entry: './index.jsx',
+  entry: './index.js',
   output: {
     path: __dirname,
     filename: 'bundle.js'
@@ -12,15 +12,14 @@ var config = {
   module: {
     loaders: [
       {
-        test: /.jsx?$/,
-        loader: 'babel-loader',
+        loader: 'babel',
         exclude: /node_modules/,
-        include: __dirname,
+        test: /\.js$/,
         query: {
-          presets: ['es2016', 'react']
+            presets: ['es2015']
         }
       }
-    ]
+    ],
   },
   devServer: {
     host: host,
