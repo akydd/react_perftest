@@ -1,4 +1,4 @@
-import {PropTypes} from 'react'
+import React, {PropTypes} from 'react'
 
 const Item = ({text, active}) => (
     <div>
@@ -10,3 +10,5 @@ Item.propTypes = {
     text: PropTypes.string.isRequired
   , active: PropTypes.bool.isRequired
 }
+
+export default Item

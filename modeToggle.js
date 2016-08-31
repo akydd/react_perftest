@@ -1,4 +1,4 @@
-import {PropTypes} from 'react'
+import React, {PropTypes} from 'react'
 
 const ModeToggle = ({onClick}) => (
     <div>
@@ -9,3 +9,5 @@ const ModeToggle = ({onClick}) => (
 ModeToggle.propTypes = {
     onClick: PropTypes.func.isRequired
 }
+
+export default ModeToggle

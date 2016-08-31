@@ -1,4 +1,8 @@
 import {connect} from 'react-redux'
 import ModeToggle from './modeToggle.js'
 
-export default connect()(ModeToggle)
+const mapDispatchToProps = (dispatch) => ({
+    onClick: () => dispatch()
+})
+
+export default connect(null, mapDispatchToProps)(ModeToggle)

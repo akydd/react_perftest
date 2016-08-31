@@ -1,3 +1,4 @@
+import React from 'react'
 import ImmutablePropTypes from 'react-immutable-proptypes'
 import ItemContainer from './itemContainer.js'
 
@@ -16,3 +17,5 @@ const ItemList = ({items}) => (
 ItemList.propTypes = {
     items: ImmutablePropTypes.list.isRequired
 }
+
+export default ItemList
