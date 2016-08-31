@@ -4,9 +4,10 @@ import ItemContainer from './itemContainer.js'
 
 const ItemList = ({items}) => (
     <div>
-        {items.toArray().map(item => {
+        {items.toArray().map((item, index) => {
             return (
                 <ItemContainer
+                    key={index}
                     item={item}
                 />
             )
