@@ -6,6 +6,7 @@ import Item from './item.js'
 const ItemContainer = ({item, active}) => (
     <Item
         text={item.text}
+        number={item.number}
         active={active}
     />
 )
